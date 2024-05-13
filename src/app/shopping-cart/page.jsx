@@ -57,7 +57,7 @@ const ShoppingCart = () => {
     return (
         <>
             {products.length ? (
-                <div className='h-screen bg-gray-100 pt-20'>
+                <div className={`min-h-[90vh] bg-gray-100 pt-20`}>
                     <h1 className='mb-10 text-center text-2xl font-bold'>
                         Cart Items
                     </h1>
@@ -183,7 +183,7 @@ const ShoppingCart = () => {
                     </div>
                 </div>
             ) : (
-                <section className='container px-4 mt-32 mx-auto'>
+                <section className='container px-4 py-[30px] mt-32 mx-auto'>
                     <div className='flex items-center mt-6 text-center  h-96 '>
                         <div className='flex flex-col w-full max-w-sm px-4 mx-auto'>
                             <div className='p-3 mx-auto text-blue-500 bg-blue-100 rounded-full '>

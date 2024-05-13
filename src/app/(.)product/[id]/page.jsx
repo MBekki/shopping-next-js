@@ -33,7 +33,11 @@ const ProductDetail = () => {
             const data = [...products, { ...product, quantity: 1 }];
             localStorage.setItem('carts', JSON.stringify(data));
         }
-        toast('Product added your cart!!');
+        toast('Product added your cart!!', {
+            hideProgressBar: true,
+            pauseOnHover: false,
+            position: 'bottom-right',
+        });
     };
 
     useEffect(() => {
@@ -63,7 +67,7 @@ const ProductDetail = () => {
                         className={'mx-auto max-w-3xl rounded bg-white p-10'}
                     >
                         {loading ? (
-                            <div className='h-8 w-8 rounded-full border-4 border-dotted  border-blue-600 animate-spin' />
+                            <div className='h-8 w-8 rounded-full border-[6px] border-dotted  border-blue-600 animate-spin' />
                         ) : (
                             <div className='flex gap-x-8 h-96'>
                                 {product?.image && (
@@ -106,7 +110,7 @@ const ProductDetail = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <p className='font-medium text-sm mt-2 line-clamp-[8]'>
+                                        <p className='font-medium text-sm mt-2 line-clamp-6'>
                                             {product?.description}
                                         </p>
                                         <div className='space-y-3 text-sm mt-10'>

@@ -21,7 +21,7 @@ const ProductDetail = () => {
     return (
         <>
             {product ? (
-                <div className='max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8 px-4 mt-48 pb-10'>
+                <div className='max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8 px-4 mt-36 pb-10'>
                     <MyImage product={product} />
                     <div className='divide-2 '>
                         <div className='space-y-2 pb-8'>
